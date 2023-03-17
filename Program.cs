@@ -2,6 +2,7 @@
 using Roommates.Repositories;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Roommates
 {
@@ -148,6 +149,43 @@ namespace Roommates
                     case ("Exit"):
                         runProgram = false;
                         break;
+                    case ("Update a room"):
+                        List<Room> roomOptions = roomRepo.GetAll();
+                        foreach (Room r in roomOptions)
+                        {
+                            Console.WriteLine($"{r.Id} - {r.Name} Max Occupancy({r.MaxOccupancy})");
+                        }
+
+                        Console.Write("Which room would you like to update? ");
+                        int selectedRoomId = int.Parse(Console.ReadLine());
+                        Room selectedRoom = roomOptions.FirstOrDefault(r => r.Id == selectedRoomId);
+
+                        Console.Write("New Name: ");
+                        selectedRoom.Name = Console.ReadLine();
+
+                        Console.Write("New Max Occupancy: ");
+                        selectedRoom.MaxOccupancy = int.Parse(Console.ReadLine());
+
+                        roomRepo.Update(selectedRoom);
+
+                        Console.WriteLine("Room has been successfully updated");
+                        Console.Write("Press any key to continue");
+                        Console.ReadKey();
+                        break;
+                    case ("Delete a room"):
+                        List<Room> deleteRoomOptions = roomRepo.GetAll();
+                        Console.WriteLine("Which room would you like to delete?");
+                        foreach (Room r in deleteRoomOptions)
+                        {
+                            Console.WriteLine($"{r.Id} - {r.Name}");
+                        }
+                        int userDelChoice = int.Parse(Console.ReadLine());
+                        roomRepo.Delete(userDelChoice);
+                        Console.WriteLine("The room has been deleted.");
+                        Console.Write("Press any key to continue:");
+                        Console.ReadKey();
+                        break;
+
                 }
             }
 
@@ -160,6 +198,8 @@ namespace Roommates
                 "Show all rooms",
                 "Search for room",
                 "Add a room",
+                "Update a room",
+                "Delete a room",
                 "Show all chores",
                 "Search for chore",
                 "Add a chore",

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yerwh\\workspace\\Roommates\\Roommates\\Roommates.csproj": {}
+    "C:\\Users\\16159\\workspace\\matthew-roomates\\Roommates\\Roommates.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yerwh\\workspace\\Roommates\\Roommates\\Roommates.csproj": {
+    "C:\\Users\\16159\\workspace\\matthew-roomates\\Roommates\\Roommates.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yerwh\\workspace\\Roommates\\Roommates\\Roommates.csproj",
+        "projectUniqueName": "C:\\Users\\16159\\workspace\\matthew-roomates\\Roommates\\Roommates.csproj",
         "projectName": "Roommates",
-        "projectPath": "C:\\Users\\yerwh\\workspace\\Roommates\\Roommates\\Roommates.csproj",
-        "packagesPath": "C:\\Users\\yerwh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yerwh\\workspace\\Roommates\\Roommates\\obj\\",
+        "projectPath": "C:\\Users\\16159\\workspace\\matthew-roomates\\Roommates\\Roommates.csproj",
+        "packagesPath": "C:\\Users\\16159\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\16159\\workspace\\matthew-roomates\\Roommates\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\yerwh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\16159\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
